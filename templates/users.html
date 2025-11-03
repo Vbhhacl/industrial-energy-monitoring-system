@@ -1,0 +1,22 @@
+]{% extends "layout.html" %}
+{% block content %}
+<h2>Manage Users</h2>
+
+<form action="/add_user" method="POST" class="form-section">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <button type="submit">Add User</button>
+</form>
+
+<table>
+    <tr><th>Name</th><th>Email</th><th>Actions</th></tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td><a href="/delete_user/{{ user.id }}" class="delete-btn">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

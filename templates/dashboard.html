@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Dashboard Overview</h2>
+
+<div class="card">
+    <h3>Total Users</h3>
+    <p>{{ total_users }}</p>
+</div>
+
+<div class="card">
+    <h3>Total Meters</h3>
+    <p>{{ total_meters }}</p>
+</div>
+
+<div class="card">
+    <h3>Total Consumption Entries</h3>
+    <p>{{ total_consumptions }}</p>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+{% endblock %}

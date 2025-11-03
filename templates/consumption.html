@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Consumption Records</h2>
+
+<form action="/add_consumption" method="POST" class="form-section">
+    <select name="meter_id" required>
+        <option value="">Select Meter</option>
+        {% for meter, user in meters %}
+        <option value="{{ meter.id }}">{{ meter.location }} ({{ user.name }})</option>
+        {% endfor %}
+    </select>
+    <input type="date" name="date" required>
+    <input type="number" step="0.1" name="energy_used" placeholder="Energy (kWh)" required>
+    <button type="submit">Add</button>
+</form>
+
+<table>
+    <tr><th>Meter</th><th>User</th><th>Date</th><th>Energy</th><th>Cost</th><th>Actions</th></tr>
+    {% for c, m, u in records %}
+    <tr>
+        <td>{{ m.location }}</td>
+        <td>{{ u.name }}</td>
+        <td>{{ c.date }}</td>
+        <td>{{ c.energy_used }}</td>
+        <td>{{ c.cost }}</td>
+        <td><a href="/delete_consumption/{{ c.id }}" class="delete-btn">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

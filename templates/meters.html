@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Meters</h2>
+
+<form action="/add_meter" method="POST" class="form-section">
+    <input type="text" name="location" placeholder="Location" required>
+    <select name="user_id" required>
+        <option value="">Select User</option>
+        {% for user in users %}
+        <option value="{{ user.id }}">{{ user.name }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Add Meter</button>
+</form>
+
+<table>
+    <tr><th>Location</th><th>User</th><th>Actions</th></tr>
+    {% for meter, user in meters %}
+    <tr>
+        <td>{{ meter.location }}</td>
+        <td>{{ user.name }}</td>
+        <td><a href="/delete_meter/{{ meter.id }}" class="delete-btn">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

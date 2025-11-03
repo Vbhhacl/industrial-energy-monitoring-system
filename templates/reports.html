@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Reports Overview</h2>
+
+<table>
+    <tr><th>Total Users</th><td>{{ total_users }}</td></tr>
+    <tr><th>Total Meters</th><td>{{ total_meters }}</td></tr>
+    <tr><th>Total Entries</th><td>{{ total_consumptions }}</td></tr>
+    <tr><th>Total Energy (kWh)</th><td>{{ total_energy }}</td></tr>
+    <tr><th>Total Cost (₹)</th><td>{{ total_cost }}</td></tr>
+</table>
+
+{% endblock %}

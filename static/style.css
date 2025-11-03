@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #111;
+  color: white;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #000;
+  height: 100vh;
+  position: fixed;
+  padding: 20px;
+  top: 0;
+  left: 0;
+}
+
+.sidebar a {
+  color: #00eaff;
+  display: block;
+  margin: 12px 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  background: #022;
+  padding-left: 6px;
+  transition: 0.2s;
+}
+
+/* Page Content Area */
+.content-wrapper {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+.content {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 90vh;
+}
+
+/* Cards */
+.card {
+  background: #222;
+  padding: 20px;
+  border: 1px solid #00eaff;
+  border-radius: 6px;
+  margin: 10px;
+  display: inline-block;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #00eaff;
+}
+
+th, td {
+  padding: 10px;
+  color: white;
+}
+
+th {
+  background: #033;
+}
+
+tr:nth-child(even) {
+  background: #111;
+}
+
+tr:hover {
+  background: #022;
+}
+
+/* Forms */
+h2, h3, label {
+  color: white;
+}
+
+input, select {
+  background: #222;
+  color: white;
+  border: 1px solid #00eaff;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+button {
+  background: #00eaff;
+  color: #000;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #008bb8;
+}
