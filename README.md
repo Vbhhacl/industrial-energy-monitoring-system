@@ -47,6 +47,24 @@ python app.py
 ```
 Open your browser and go to: http://localhost:5000
 
+## Dashboard Structure 
+
+dashboard page
+<img width="1567" height="871" alt="Screenshot 2025-11-03 142033" src="https://github.com/user-attachments/assets/7c6c126c-82d6-41be-ad15-346b9e117e41" />
+
+user page
+<img width="1859" height="762" alt="Screenshot 2025-11-03 142058" src="https://github.com/user-attachments/assets/33888bae-95f9-4462-a3d3-bbd14a5937f8" />
+
+meter page
+<img width="1867" height="692" alt="Screenshot 2025-11-03 142130" src="https://github.com/user-attachments/assets/0d45e3fa-6c13-4fcf-9418-1e21b7300365" />
+
+consumption page
+<img width="1862" height="635" alt="Screenshot 2025-11-03 142157" src="https://github.com/user-attachments/assets/49f745a3-2909-45b5-a01b-cc8dc5828485" />
+
+summary page 
+<img width="1859" height="621" alt="Screenshot 2025-11-03 142223" src="https://github.com/user-attachments/assets/31de2a34-ec06-4696-963a-125c62410be4" />
+
+
 📊 Usage Workflow
 Create User: Go to the Users tab and add a new user (e.g., "John Admin").
 
